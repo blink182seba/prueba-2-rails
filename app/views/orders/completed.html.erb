@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <% @orders.each_slice(4) do |row| %>
+      <% row.each do |i| %>
+        <div class="col-md-3">
+          <div class="card">
+            <%= image_tag i.task.photo, class: 'card-img-top' %>
+            <div class="body">
+              <h5><%= i.task.name %></h5>
+            </div>
+          </div>
+        </div>
+      <% end %>
+      <div class="w-100"></div>
+    <% end %>
+  </div>
+</div>
